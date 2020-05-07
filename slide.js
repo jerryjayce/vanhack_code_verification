@@ -1,9 +1,8 @@
+// Add your javascript here. Plagiarism will NOT be tolerated!
 
-// <!--slide script-->
 
+// slide script
 $(document).ready(function () {
-    // setInterval(nextSlide, 5000);
-
     $('#next').click(function () {
         nextSlide(1);
     });
@@ -39,45 +38,106 @@ $(document).ready(function () {
         }
 
     }
-});
 
-// <!--Modal script-->
+
+//    slide variables
+    let event_title = $(".event-title");
+    let event_desc_abbr = $(".event_desc_abbr");
+    let attend = $(".attend");
+    let share_event_title = event_title[0].innerText;
+    let share_event_details = event_desc_abbr[0].innerText;
 
 
 //open and close modal, transfer slide text contents to modal
-let button_event_details = $(".button_event_details");
+    $(".button_event_details").click(function () {
 
-button_event_details.click(function (e) {
-    let event_title = $(".event-title");
-    let event_desc_abbr = $(".event_desc_abbr");
+        close_notification();
 
-    $(".modal_event_title").text(event_title[0].innerText);
-    $(".modal_event_body").text(event_desc_abbr[0].innerText);
+        init_current_slide_variables();
 
-    $(".modal_event_details").fadeIn(500);
+        $(".modal_event_title").text(event_title[0].innerText);
+        $(".modal_event_body").text(event_desc_abbr[0].innerText);
+        $(".attend1").text(attend[0].innerText);
 
-    console.log(event_title[0].innerText);
-    console.log(event_desc_abbr[0].innerText);
+        //disable attend button if event is already booked
+        if (attend[0].innerText == "Booked") {
+            let modal_attend_button = $(".attend1");
+            modal_attend_button[0].setAttribute("disabled", "true");
+        }
 
-});
+        $(".modal_event_details").fadeIn(500);
 
-$(".close, .close1").click(function () {
-    $(".modal_event_details").fadeOut(500);
-});
-//close modal with escape key`
-$(document).keydown(function (event) {
-    if (event.which === 27) {
+
+        //share event on twitter
+        let url_and_data = " <a href='https://twitter.com/intent/tweet?text=";
+        url_and_data += share_event_title;
+        url_and_data += ": " + share_event_details;
+        url_and_data += " ' ";
+        url_and_data += " class='text-white text-decoration-none' ";
+        url_and_data += " data-show-count='false'>Tweet</a> ";
+        $(".share_event").html(url_and_data);
+
+    });
+
+    $(".close, .close1").click(function () {
         $(".modal_event_details").fadeOut(500);
+    });
+    //close modal with escape key
+    $(document).keydown(function (event) {
+        if (event.which === 27) {
+            $(".modal_event_details").fadeOut(500);
+        }
+    });
+
+
+    //attend button and notification
+    $(".attend, attend1").click(function () {
+        close_notification();
+        init_current_slide_variables();
+        save_attend_status_locally(share_event_title);
+        update_booked_event_button();
+
+
+        $(".modal_event_details").fadeOut(500, function () {
+            $("#notification_type").html(share_event_title);
+            $("#notification").fadeIn(1000);
+        });
+    });
+
+    $(".close_notification").click(function () {
+        close_notification();
+    });
+
+    function close_notification() {
+        $("#notification").fadeOut(500);
     }
+
+
+    function init_current_slide_variables() {
+        event_title = $(".event-title");
+        event_desc_abbr = $(".event_desc_abbr");
+        share_event_title = event_title[0].innerText;
+        attend = $(".attend");
+        share_event_details = event_desc_abbr[0].innerText;
+    }
+
+    function save_attend_status_locally(share_event_title) {
+        localStorage.setItem(share_event_title, "1");
+    }
+
+    update_booked_event_button();
+
+    function update_booked_event_button() {
+        let attend_button = $(".attend");
+
+        event_title.map(element => {
+            if (localStorage.getItem(event_title[element].innerText) !== null) {
+                attend_button[element].innerText = "Booked";
+                attend_button[element].setAttribute("disabled", "true");
+            }
+
+        })
+    }
+
+
 });
-
-
-// <!--facebook share script-->
-(function (d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s);
-    js.id = id;
-    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
-    fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));

@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="88ab138d-3442-47c4-9152-f9239da66d49" name="Default Changelist" comment="" />
+    <list default="true" id="88ab138d-3442-47c4-9152-f9239da66d49" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/slide.js" beforeDir="false" afterPath="$PROJECT_DIR$/slide.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,7 +26,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1bPCe9901cOUJn3Zhe4iLNOd2Rn" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -29,6 +39,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../REACT-PROJECTS/agroXLanding1" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -57,7 +68,7 @@
       <updated>1588524433860</updated>
       <workItem from="1588524435612" duration="134000" />
       <workItem from="1588524608373" duration="146000" />
-      <workItem from="1588524944120" duration="59741000" />
+      <workItem from="1588524944120" duration="82264000" />
     </task>
     <servers />
   </component>
@@ -77,10 +88,10 @@
       <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state x="440" y="271" key="com.intellij.ide.util.TipDialog/0.30.1536.834@0.30.1536.834" timestamp="1588524946296" />
-    <state x="373" y="124" width="790" height="646" key="find.popup" timestamp="1588691341807">
+    <state x="373" y="124" width="790" height="646" key="find.popup" timestamp="1588885897975">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
-    <state x="373" y="124" width="790" height="646" key="find.popup/0.30.1536.834@0.30.1536.834" timestamp="1588691341807" />
+    <state x="373" y="124" width="790" height="646" key="find.popup/0.30.1536.834@0.30.1536.834" timestamp="1588885897975" />
     <state x="425" y="204" key="run.anything.popup" timestamp="1588628675444">
       <screen x="0" y="30" width="1536" height="834" />
     </state>

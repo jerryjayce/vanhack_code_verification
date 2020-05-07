@@ -1,3 +1,4 @@
+@import url("https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css");
 body{
     font-family: 'Roboto', sans-serif;
 }
@@ -7,7 +8,7 @@ body{
     padding: 2rem 1rem;
     margin-bottom: 2rem;
     background: linear-gradient(rgba(132, 187, 216, 0.65), rgba(3, 40, 123, 0.39)),
-    url("surfacebookpen.jpg");
+    url("https://raw.githubusercontent.com/jerryjayce/vanhack_code_verification/master/surfacebookpen.jpg");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -34,7 +35,7 @@ body{
     width: 100%;
     height: 30rem;
     background: linear-gradient(rgba(0, 14, 21, 0.65), rgba(3, 40, 123, 0.39)),
-    url("event.jpg");
+    url("https://raw.githubusercontent.com/jerryjayce/vanhack_code_verification/master/event.jpg");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -107,6 +108,7 @@ body{
     height: 100%;
     background: rgba(0, 0, 0, 0.51);
     display: none;
+    z-index: 4;
 }
 
 .modal_event_content{
@@ -114,27 +116,6 @@ body{
     width: 57%;
     margin: 8rem auto;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .vanhack_footer{
     width: 100%;
@@ -153,4 +134,12 @@ body{
     background: white;
     border: 1px solid #cfd0d1;
     color: #6f6f6f;
+}
+
+#notification{
+    position: fixed;
+    top: 5rem;
+    left: 0rem;
+    z-index: 3;
+    display: none;
 }
